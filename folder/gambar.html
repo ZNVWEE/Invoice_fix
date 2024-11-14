@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Render JSON on Canvas</title>
+    <script src="https://id.postermywall.com/index.php/posterbuilder/load/a8c1d42f4f41166f0a7f7f237f28d643"></script>
+</head>
+<body>
+    <canvas id="canvas" width="1200" height="600"></canvas>
+    <script>
+        const canvas = new fabric.Canvas('canvas');
+        
+        // Masukkan JSON kamu di sini
+        const jsonData = {
+            "objects": [
+                {
+                    "type": "image",
+                    "originX": "left",
+                    "originY": "top",
+                    "left": 365.818604689685,
+                    "top": 3.5442927063256207,
+                    "width": 800,
+                    "height": 352,
+                    "scaleX": 0.41579395534355135,
+                    "scaleY": 0.41579395534355135,
+                    "angle": 0,
+                    "opacity": 1,
+                    "src": "path_to_your_image.png"  // Ganti dengan path gambar yang sesuai
+                }
+            ]
+        };
+
+        canvas.loadFromJSON(jsonData, canvas.renderAll.bind(canvas));
+    </script>
+</body>
+</html>
